@@ -1,0 +1,9 @@
+.signup {
+  height: 70px;
+
+}
+.form-control::placeholder {
+  font-size: 24px !important;
+  font-weight: 200 !important;
+  color: #9c9c9c;
+}
