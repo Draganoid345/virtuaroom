@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
+import WelcomePage from "./WelcomePage";
 
 ReactDOM.render(
   <React.StrictMode>
