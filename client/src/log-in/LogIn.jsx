@@ -5,7 +5,28 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PasswordIcon from "@mui/icons-material/Password";
 import SideMenu from "../side-menu/SideMenu";
 import { useNavigate } from "react-router-dom";
+import {useState} from "react";
+import Axios from 'axios';
+
+
+
+
+
 const LogIn = (props) => {
+
+    const [email, setEmail] = useState('')
+    const [password, setpassword] = useState('')
+
+    const login = () => {
+        Axios.post('http://localhost:3001/login', {
+
+            email: email,
+            password: password,
+        }).then((response) => {
+            console.log(response);
+        });
+    };
+
   let navigate = useNavigate();
   return (
     <>
@@ -58,6 +79,7 @@ const LogIn = (props) => {
                   aria-label="Email"
                   aria-describedby="basic-addon1"
                   style={{ borderLeft: "0", borderRadius: "0px 30px 30px 0" }}
+                  onChange={(e)=>{setEmail(e.target.value)}}
                 />
               </div>
               <div className="input-group mb-3 signup">
@@ -79,6 +101,7 @@ const LogIn = (props) => {
                   aria-label="Username"
                   aria-describedby="basic-addon2"
                   style={{ borderLeft: "0", borderRadius: "0px 30px 30px 0" }}
+                  onChange={(e)=>{setpassword(e.target.value)}}
                 />
               </div>
               <div className="d-flex justify-content-center">
@@ -97,6 +120,7 @@ const LogIn = (props) => {
                     paddingBottom: "10px",
                   }}
                   id="submit-button"
+                  onClick={login}
                 >
                   Log In
                 </Button>
@@ -125,7 +149,8 @@ const LogIn = (props) => {
                   }}
                   id="submit-button"
                   onClick={() => {
-                    navigate("/sign-up");
+
+                      navigate("/sign-up");
                   }}
                 >
                   Sign Up
