@@ -2,9 +2,27 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import SideMenu from "../side-menu/SideMenu";
 import { useNavigate } from "react-router-dom";
+import {useState} from "react";
+import Axios from 'axios';
 
 const SignUp = (props) => {
-  let navigate = useNavigate();
+
+    const [emailReg, setEmailReg] = useState('')
+    const [firstNameReg, setfirstNameReg] = useState('')
+    const [lastNameReg, setlastNameReg] = useState('')
+    const [passwordReg, setpasswordReg] = useState('')
+
+    const register = () => {
+        Axios.post('http://localhost:3001/register', {
+            firstName: firstNameReg,
+            lastName: lastNameReg,
+            email: emailReg,
+            password: passwordReg,
+        }).then((response) => {
+            console.log(response);
+        });
+    };
+    let navigate = useNavigate();
   return (
     <>
       <div
@@ -35,6 +53,7 @@ const SignUp = (props) => {
                   placeholder="First Name"
                   aria-label="First name"
                   style={{ borderRadius: "30px " }}
+                  onChange={(e)=>{setfirstNameReg(e.target.value)}}
                 />
               </div>
               <div className="input-group mb-3 signup">
@@ -45,16 +64,18 @@ const SignUp = (props) => {
                   aria-label="Last Name"
                   aria-describedby="basic-addon2"
                   style={{ borderRadius: "30px " }}
+                  onChange={(e)=>{setlastNameReg(e.target.value)}}
                 />
               </div>
               <div className="input-group mb-3 signup">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Phone Number"
-                  aria-label="Phone Number"
+                  placeholder="Email"
+                  aria-label="Email"
                   aria-describedby="basic-addon3"
                   style={{ borderRadius: "30px " }}
+                  onChange={(e)=>{setEmailReg(e.target.value)}}
                 />
               </div>
               <div className="input-group mb-3 signup">
@@ -65,6 +86,7 @@ const SignUp = (props) => {
                   aria-label="Password"
                   aria-describedby="basic-addon4"
                   style={{ borderRadius: "30px " }}
+                  onChange={(e)=>{setpasswordReg(e.target.value)}}
                 />
               </div>
               <div className="input-group mb-3 signup">
@@ -75,6 +97,7 @@ const SignUp = (props) => {
                   aria-label="Confirm Password"
                   aria-describedby="basic-addon5"
                   style={{ borderRadius: "30px " }}
+                  onChange={(e)=>{setpasswordReg(e.target.value)}}
                 />
               </div>
               <div className="d-flex justify-content-center">
@@ -93,6 +116,7 @@ const SignUp = (props) => {
                     paddingBottom: "10px",
                   }}
                   id="submit-button"
+                  onClick={register}
                 >
                   Sign Up
                 </Button>
@@ -119,7 +143,8 @@ const SignUp = (props) => {
                   }}
                   id="submit-button"
                   onClick={() => {
-                    navigate("/log-in");
+
+                      navigate("/log-in");
                   }}
                 >
                   Log In
