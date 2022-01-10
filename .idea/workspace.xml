@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b27e895-c3b3-4090-99aa-00a3a301154e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/bookings/Bookings.jsx" afterDir="false" />
+    <list default="true" id="7b27e895-c3b3-4090-99aa-00a3a301154e" name="Changes" comment="Small bug fixes">
+      <change afterPath="$PROJECT_DIR$/client/src/contacts/Contact.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/contacts/Map.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/contacts/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/log-in/LogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/log-in/LogIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\uvt\an 3\virtuaroom_db\client\src\contacts" />
       <recent name="E:\uvt\an 3\virtuaroom_db\client\public\assets" />
       <recent name="E:\uvt\an 3\virtuaroom_db\client\src\bookings" />
     </key>
@@ -86,8 +87,16 @@
       <option name="presentableId" value="Default" />
       <updated>1639414180729</updated>
       <workItem from="1639414182533" duration="3472000" />
-      <workItem from="1641834259941" duration="8282000" />
+      <workItem from="1641834259941" duration="11104000" />
     </task>
+    <task id="LOCAL-00001" summary="Small bug fixes">
+      <created>1641842844895</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641842844895</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,5 +113,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Small bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small bug fixes" />
   </component>
 </project>

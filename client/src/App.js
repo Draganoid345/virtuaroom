@@ -5,6 +5,7 @@ import SignUp from "./sign-up/SignUp";
 import Settings from "./settings/Settings";
 import WelcomePage from "./WelcomePage";
 import Bookings from "./bookings/Bookings";
+import Contacts from "./contacts/Contact"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/account" element={<SignUp />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/contact" element={<SignUp />} />
+          <Route path="/contact" element={<Contacts />} />
         </Routes>
       </Router>
     </>
