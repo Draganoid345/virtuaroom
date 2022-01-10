@@ -34,11 +34,13 @@ app.post('/register',(req, res)=>{
         [firstName,lastName,email,password], (err, result) =>{
             if (err) {
                 console.log(err)
+
             } else {
                 res.send("Values inserted")
             }
         }
     );
+
 });
 
 app.post('/login', (req, res)=>{
@@ -51,16 +53,49 @@ app.post('/login', (req, res)=>{
         (err,result) => {
             if (err){
                 res.send({err: err});
+
         }
             if (result.length>0){
-                res.send(result)
+                res.send(result);
+
             } else{
-                res.send({message: "Wrong email/password combination"});
+                res.send({message: "Wrong email/password combination"})
+
                 }
             }
         );
 
+    db.query(
+        'INSERT INTO rooms (room_type, room_title, size, description) VALUES ("a","b","c","d")',(err, result) =>{
+            if (err) {
+                console.log(err)
+
+            } else {
+                res.send("Values inserted")
+            }
+        }
+    );
+
 })
+
+// app.post('/bookings', (req, res)=>{
+//
+//
+//     db.query(
+//         'SELECT booking FROM users',
+//         (err,result) => {
+//             if (err){
+//                 res.send({err: err});
+//             }
+//             if (result.length>0){
+//                 console.log(result);
+//             } else{
+//                 console.log({message: "No bookings"})
+//             }
+//         }
+//     );
+//
+// })
 
 
 app.listen(3001,()=> {

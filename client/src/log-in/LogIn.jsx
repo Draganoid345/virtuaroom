@@ -15,7 +15,9 @@ import Axios from 'axios';
 const LogIn = (props) => {
 
     const [email, setEmail] = useState('')
-    const [password, setpassword] = useState('')
+    const [password, setPassword] = useState('')
+
+    const [loginStatus, setLoginStatus] = useState("")
 
     const login = () => {
         Axios.post('http://localhost:3001/login', {
@@ -23,7 +25,16 @@ const LogIn = (props) => {
             email: email,
             password: password,
         }).then((response) => {
-            console.log(response);
+
+            if (response.data.message){
+                setLoginStatus(response.data.message)
+                window.localStorage.setItem("logged", "false");
+            }
+            else{
+                setLoginStatus(response.data[0].email)
+                window.localStorage.setItem("logged", "true");
+            }
+
         });
     };
 
@@ -79,7 +90,7 @@ const LogIn = (props) => {
                   aria-label="Email"
                   aria-describedby="basic-addon1"
                   style={{ borderLeft: "0", borderRadius: "0px 30px 30px 0" }}
-                  onChange={(e)=>{setEmail(e.target.value)}}
+                  onChange={(e)=>{setEmail(e.target.value);}}
                 />
               </div>
               <div className="input-group mb-3 signup">
@@ -101,7 +112,7 @@ const LogIn = (props) => {
                   aria-label="Username"
                   aria-describedby="basic-addon2"
                   style={{ borderLeft: "0", borderRadius: "0px 30px 30px 0" }}
-                  onChange={(e)=>{setpassword(e.target.value)}}
+                  onChange={(e)=>{setPassword(e.target.value);}}
                 />
               </div>
               <div className="d-flex justify-content-center">
@@ -120,9 +131,14 @@ const LogIn = (props) => {
                     paddingBottom: "10px",
                   }}
                   id="submit-button"
+                  // onClick={() => {
+                  //
+                  //
+                  //     navigate("/bookings");
+                  // }}
                   onClick={login}
                 >
-                  Log In
+                    Login
                 </Button>
               </div>
               <br />
@@ -155,11 +171,17 @@ const LogIn = (props) => {
                 >
                   Sign Up
                 </Button>
+
               </div>
+
+
             </Form>
           </div>
         </div>
       </div>
+        <div>
+            <h1>{loginStatus}</h1>
+        </div>
     </>
   );
 };
