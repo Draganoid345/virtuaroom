@@ -27,6 +27,11 @@ const Bookings = (props) => {
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
+        display: "flex",
+        flexDirection: 'column',
+        //alignItems: 'flex-start',
+        justifyContent: "center",
+        borderRadius: "10px",
     };
 
     let navigate = useNavigate();
@@ -37,6 +42,23 @@ const Bookings = (props) => {
     const [open, setOpen] = useState(false);
     const handleOpenDate = () => setOpen(true);
     const handleCloseDate = () => setOpen(false);
+
+    const [data, setData] = useState(new Date());
+    const [username, setUserName] = useState(window.localStorage.getItem("username"));
+
+    const handleBooking = () => {
+        Axios.post('http://localhost:3001/bookings', {
+            data: data.toUTCString(),
+            username: username,
+            room_type: selectedRoom,
+        }).then((response) => {
+            if (response.data.message) {
+                console.log(response.data.message);
+            }
+        });
+        handleCloseDate();
+    }
+
 
     const bull = (
         <Box
@@ -82,11 +104,10 @@ const Bookings = (props) => {
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
+                                                Small room
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis maximus velit, nec pulvinar diam posuere vel. Quisque iaculis nunc ac viverra convallis. Pellentesque velit urna, viverra eu ullamcorper vel, ornare sed quam. Donec tempor, nisl vel pulvinar maximus, dui ex eleifend arcu, a tempor urna purus vitae leo.
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
@@ -103,6 +124,10 @@ const Bookings = (props) => {
                                                         onChange={(date) => setStartDate(date)}
 
                                                         inline
+
+                                                        showTimeSelect
+                                                        minDate={new Date()}
+
                                                     />
                                                     <Button>Book Now</Button>
                                                 </Box>
@@ -120,11 +145,10 @@ const Bookings = (props) => {
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
+                                                Medium room
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                                Cras mattis quam at ligula pellentesque, eget posuere nisi euismod. Nulla rutrum laoreet sapien, sed cursus urna sollicitudin non. Sed efficitur massa tempor urna mollis, et placerat enim venenatis. Nunc metus erat, dapibus ultrices neque sed, vehicula auctor erat.
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
@@ -141,6 +165,10 @@ const Bookings = (props) => {
                                                         onChange={(date) => setStartDate(date)}
 
                                                         inline
+
+                                                        showTimeSelect
+                                                        minDate={new Date()}
+
                                                     />
                                                     <Button>Book Now</Button>
                                                 </Box>
@@ -153,16 +181,15 @@ const Bookings = (props) => {
                                         <CardMedia
                                             component="img"
                                             height="500"
-                                            image={process.env.PUBLIC_URL + "/assets/fundal5.jpg"}
+                                            image={process.env.PUBLIC_URL + "/assets/fundal3.jpg"}
                                             alt="green iguana"
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
+                                                Big room
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                                Nullam congue risus cursus lacinia imperdiet. Quisque accumsan vulputate cursus. Curabitur eu enim id lectus fermentum mattis placerat cursus orci. Fusce scelerisque leo sollicitudin felis tempus, eu vestibulum arcu bibendum congue risus cursus.
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
@@ -179,7 +206,10 @@ const Bookings = (props) => {
                                                         onChange={(date) => setStartDate(date)}
 
                                                         inline
+
+                                                        showTimeSelect
                                                         minDate={new Date()}
+
                                                     />
                                                     <Button>Book Now</Button>
                                                 </Box>

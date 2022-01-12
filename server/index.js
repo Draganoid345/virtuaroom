@@ -65,8 +65,18 @@ app.post('/login', (req, res)=>{
             }
         );
 
+
+})
+
+app.post('/bookings', (req, res)=>{
+
+    const data = req.body.data;
+    const username = req.body.username;
+    const room_type = req.body.room_type;
     db.query(
-        'INSERT INTO rooms (room_type, room_title, size, description) VALUES ("a","b","c","d")',(err, result) =>{
+        'INSERT INTO bookings (date, user, room_type) VALUES(?,?,?)',
+        [data,username, room_type],
+        (err, result) =>{
             if (err) {
                 console.log(err)
 
@@ -78,24 +88,25 @@ app.post('/login', (req, res)=>{
 
 })
 
-// app.post('/bookings', (req, res)=>{
-//
-//
-//     db.query(
-//         'SELECT booking FROM users',
-//         (err,result) => {
-//             if (err){
-//                 res.send({err: err});
-//             }
-//             if (result.length>0){
-//                 console.log(result);
-//             } else{
-//                 console.log({message: "No bookings"})
-//             }
-//         }
-//     );
-//
-// })
+app.post('/account', (req, res)=>{
+    const username = req.body.username;
+    db.query(
+        'SELECT * FROM bookings WHERE user = ?',
+        [username],
+        (err,result) => {
+            if (err){
+                res.send({err: err});
+            }
+            if (result.length>0){
+                res.send(result);
+            } else{
+                res.send({message: "Wrong email/password combination"})
+
+            }
+        }
+    );
+})
+
 
 
 app.listen(3001,()=> {

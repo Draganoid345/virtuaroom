@@ -6,6 +6,7 @@ import Settings from "./settings/Settings";
 import WelcomePage from "./WelcomePage";
 import Bookings from "./bookings/Bookings";
 import Contacts from "./contacts/Contact"
+import Account from "./account/Account"
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/bookings" element={<Bookings />} />
-          <Route path="/account" element={<SignUp />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/contact" element={<Contacts />} />
         </Routes>

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b27e895-c3b3-4090-99aa-00a3a301154e" name="Changes" comment="Minor fixes">
-      <change beforePath="$PROJECT_DIR$/client/src/contacts/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/contacts/map.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/account/Account.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/bookings/Bookings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/bookings/Bookings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/side-menu/SideMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/side-menu/SideMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+    </list>
+    <list id="defb6037-9fe7-4501-9509-e0e8d8ba8d38" name="Changes by Draganoid" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/bookings/Bookings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/bookings/Bookings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/log-in/LogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/log-in/LogIn.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +39,36 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/client/src/bookings/Bookings.jsx">
+      <ranges>
+        <range start1="15" end1="15" start2="15" end2="16" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="29" end1="29" start2="30" end2="35" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="33" end1="33" start2="39" end2="40" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="40" end1="40" start2="47" end2="64" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="84" end1="85" start2="108" end2="109" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="87" end1="89" start2="111" end2="112" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="92" end1="93" start2="115" end2="119" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="101" end1="103" start2="127" end2="131" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="105" end1="105" start2="133" end2="137" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="106" end1="107" start2="138" end2="139" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="122" end1="123" start2="154" end2="155" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="125" end1="127" start2="157" end2="158" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="130" end1="131" start2="161" end2="165" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="139" end1="141" start2="173" end2="178" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="143" end1="143" start2="180" end2="184" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="144" end1="145" start2="185" end2="186" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="155" end1="156" start2="196" end2="197" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="160" end1="161" start2="201" end2="202" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="163" end1="165" start2="204" end2="205" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="168" end1="169" start2="208" end2="212" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="177" end1="179" start2="220" end2="224" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+        <range start1="181" end1="181" start2="226" end2="228" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="182" end1="182" start2="229" end2="230" changelist="7b27e895-c3b3-4090-99aa-00a3a301154e" />
+        <range start1="183" end1="184" start2="231" end2="232" changelist="defb6037-9fe7-4501-9509-e0e8d8ba8d38" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="22EsesSKOz11KC7F8J9iF3Bz2iz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,6 +78,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -47,6 +87,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\virtuaroom\client\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="E:\webstorm\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +122,9 @@
       <option name="presentableId" value="Default" />
       <updated>1639414180729</updated>
       <workItem from="1639414182533" duration="3472000" />
-      <workItem from="1641834259941" duration="11263000" />
+      <workItem from="1641834259941" duration="13021000" />
+      <workItem from="1641922298652" duration="9970000" />
+      <workItem from="1641981606395" duration="3174000" />
     </task>
     <task id="LOCAL-00001" summary="Small bug fixes">
       <created>1641842844895</created>
@@ -97,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641845533204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Minor fixes">
+      <created>1641845565994</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641845565994</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +169,9 @@
     <MESSAGE value="Small bug fixes" />
     <MESSAGE value="Minor fixes" />
     <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
