@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import CardMedia from '@mui/material/CardMedia';
 import Modal from '@mui/material/Modal';
+import Axios from "axios";
 
 
 const Bookings = (props) => {
@@ -36,6 +37,7 @@ const Bookings = (props) => {
 
     let navigate = useNavigate();
     const [startDate, setStartDate] = useState(new Date());
+    const [selectedRoom, setSelectedRoom] = useState("");
     //console.log(startDate.getMonth());
     console.log(startDate.toISOString());
 
@@ -111,7 +113,10 @@ const Bookings = (props) => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button onClick={handleOpenDate}>Choose Date</Button>
+                                            <Button onClick={() => {
+                                                setOpen(true)
+                                                setSelectedRoom("small");
+                                            }}>Choose Date</Button>
                                             <Modal
                                                 open={open}
                                                 onClose={handleCloseDate}
@@ -120,8 +125,10 @@ const Bookings = (props) => {
                                             >
                                                 <Box sx={style}>
                                                     <DatePicker
-                                                        selected={startDate}
-                                                        onChange={(date) => setStartDate(date)}
+                                                        selected={data}
+                                                        onChange={(date) => {
+                                                            setData(date)
+                                                        }}
 
                                                         inline
 
@@ -129,7 +136,7 @@ const Bookings = (props) => {
                                                         minDate={new Date()}
 
                                                     />
-                                                    <Button>Book Now</Button>
+                                                    <Button onClick={handleBooking}>Book Now</Button>
                                                 </Box>
                                             </Modal>
                                         </CardActions>
@@ -152,7 +159,10 @@ const Bookings = (props) => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button onClick={handleOpenDate}>Choose Date</Button>
+                                            <Button onClick={() => {
+                                                setOpen(true)
+                                                setSelectedRoom("medium");
+                                            }}>Choose Date</Button>
                                             <Modal
                                                 open={open}
                                                 onClose={handleCloseDate}
@@ -161,8 +171,11 @@ const Bookings = (props) => {
                                             >
                                                 <Box sx={style}>
                                                     <DatePicker
-                                                        selected={startDate}
-                                                        onChange={(date) => setStartDate(date)}
+                                                        selected={data}
+                                                        onChange={(date) => {
+                                                            setData(date)
+
+                                                        }}
 
                                                         inline
 
@@ -170,7 +183,7 @@ const Bookings = (props) => {
                                                         minDate={new Date()}
 
                                                     />
-                                                    <Button>Book Now</Button>
+                                                    <Button onClick={handleBooking}>Book Now</Button>
                                                 </Box>
                                             </Modal>
                                         </CardActions>
@@ -193,7 +206,10 @@ const Bookings = (props) => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button onClick={handleOpenDate}>Choose Date</Button>
+                                            <Button onClick={() => {
+                                                setOpen(true)
+                                                setSelectedRoom("big");
+                                            }}>Choose Date</Button>
                                             <Modal
                                                 open={open}
                                                 onClose={handleCloseDate}
@@ -202,8 +218,10 @@ const Bookings = (props) => {
                                             >
                                                 <Box sx={style}>
                                                     <DatePicker
-                                                        selected={startDate}
-                                                        onChange={(date) => setStartDate(date)}
+                                                        selected={data}
+                                                        onChange={(date) => {
+                                                            setData(date)
+                                                        }}
 
                                                         inline
 
@@ -211,7 +229,7 @@ const Bookings = (props) => {
                                                         minDate={new Date()}
 
                                                     />
-                                                    <Button>Book Now</Button>
+                                                    <Button onClick={handleBooking}>Book Now</Button>
                                                 </Box>
                                             </Modal>
                                         </CardActions>

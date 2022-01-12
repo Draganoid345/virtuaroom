@@ -5,7 +5,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PasswordIcon from "@mui/icons-material/Password";
 import SideMenu from "../side-menu/SideMenu";
 import { useNavigate } from "react-router-dom";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Axios from 'axios';
 
 
@@ -33,11 +33,17 @@ const LogIn = (props) => {
             else{
                 setLoginStatus(response.data[0].email)
                 window.localStorage.setItem("logged", "true");
+                window.localStorage.setItem("username", email);
             }
 
         });
     };
 
+    // useEffect(() => {
+    //     if(window.localStorage.getItem("logged") === "true"){
+    //         navigate("/bookings");
+    //     }
+    // },[loginStatus]);
   let navigate = useNavigate();
   return (
     <>
